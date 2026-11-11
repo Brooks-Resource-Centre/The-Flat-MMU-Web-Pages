@@ -48,11 +48,15 @@ p { margin: 0 0 1em; }
 .eyebrow { font-size: .8rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin-bottom: .75rem; }
 .lead { font-size: 1.2rem; color: var(--muted); max-width: 46ch; }
 
-header.hero { padding: 64px 0 40px; }
-.hero-grid { display: grid; gap: 40px; align-items: center; grid-template-columns: minmax(0, 1fr); }
-@media (min-width: 860px) { .hero-grid { grid-template-columns: minmax(0,1.05fr) minmax(0,1fr); } }
-.hero figure { margin: 0; }
-.hero img { border-radius: 14px; box-shadow: var(--shadow); }
+header.hero { padding: 72px 0 48px; text-align: center; }
+.hero-grid { display: grid; gap: 48px; justify-items: center; }
+.hero h1 { font-size: clamp(3.2rem, 10vw, 6rem); letter-spacing: -.035em; line-height: 1; margin-bottom: 0; }
+.hero h1::after { content: ""; display: block; width: 72px; height: 6px; background: var(--brand); margin: 24px auto 28px; }
+.hero .subtitle { display: block; font-size: clamp(1.15rem, 2.6vw, 1.6rem); font-weight: 600; letter-spacing: -.01em; margin-top: 14px; color: var(--muted); }
+.hero .lead { margin: 0 auto; max-width: 58ch; }
+.hero .actions { justify-content: center; }
+.hero figure { margin: 0; width: 100%; max-width: 960px; }
+.hero img { border-radius: 14px; box-shadow: var(--shadow); width: 100%; }
 .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
 .btn {
   display: inline-block; padding: 12px 20px; border-radius: 999px; font-weight: 600;
@@ -143,8 +147,8 @@ footer { padding: 40px 0 64px; border-top: 1px solid var(--line); color: var(--m
   <div class="wrap hero-grid">
     <div>
       <p class="eyebrow">Health &amp; Social Care</p>
-      <h1>The Flat</h1>
-      <p class="lead">A digital twin of the Community Flat in the Brooks Building. Students rehearse a full home visit, from the briefing to the handover, in a web browser on a laptop or a phone.</p>
+      <h1>The Flat<span class="subtitle">A digital twin for practising home visits</span></h1>
+      <p class="lead">A faithful copy of MMU&#39;s Community Flat in the Brooks Building. Students rehearse a full home visit, from the briefing to the handover, in a web browser on a laptop or a phone.</p>
       <div class="actions">
         <a class="btn primary" href="https://play.unity.com/en/games/1e2ab67a-80ec-418c-9069-a1597d5ad23e/mmu-student-nurse-experience" target="_blank" rel="noopener" id="play-link">Try the flat in your browser</a>
         <a class="btn ghost" href="#pilot">Walk through the visit</a>
