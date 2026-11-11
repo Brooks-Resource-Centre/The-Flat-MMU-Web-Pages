@@ -130,6 +130,13 @@ blockquote { margin: 0 0 1em; padding: 4px 0 4px 16px; border-left: 4px solid va
 .logo-dark { display: none; }
 :root[data-theme="dark"] .logo-light { display: none; } :root[data-theme="dark"] .logo-dark { display: block; }
 footer .logos img { height: 40px; width: auto; margin-bottom: 12px; }
+.sheet { display: grid; gap: 24px; grid-template-columns: minmax(0, 1fr); margin-top: 28px; }
+@media (min-width: 720px) { .sheet { grid-template-columns: minmax(0,1fr) minmax(0,1fr); } }
+.sheet figure { margin: 0; }
+.sheet a { display: block; }
+.sheet img { width: 100%; border: 1px solid var(--line); border-radius: 6px; box-shadow: var(--shadow); background: #fff; }
+.sheet-list { columns: 2 240px; column-gap: 32px; padding-left: 1.2em; margin: 20px 0 0; }
+.sheet-list li { margin-bottom: .4em; break-inside: avoid; }
 footer { padding: 40px 0 64px; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
 </style>
 </head>
@@ -273,10 +280,39 @@ footer { padding: 40px 0 64px; border-top: 1px solid var(--line); color: var(--m
         <div>
           <h3>Hand over and reflect</h3>
           <p>Back at the health centre at 4:30pm, students write an SBAR handover (Situation, Background, Assessment, Recommendation) for Sam. Sam gives feedback on what they noticed and missed, and on whether their plan involves the right services. Two reflection questions follow.</p>
-          <p>The visit ends with a record of the SBAR, choices, findings, feedback and evidence against each learning outcome. Students can save it as a PDF for their placement portfolio or send it to their practice educator.</p>
+          <p>The visit ends with a record of the SBAR, choices, findings, feedback and evidence against each learning outcome. Students can save it as a PDF for their placement portfolio or send it to their practice educator (<a href="#record">see the record below</a>).</p>
         </div>
       </li>
     </ol>
+  </div>
+</section>
+
+<section id="record" aria-labelledby="record-h">
+  <div class="wrap">
+    <p class="eyebrow">What students take away</p>
+    <h2 id="record-h">The visit record</h2>
+    <p class="lead" style="max-width:none">At the end of the visit, students download a two-page A4 record of everything they did. It works as an assessment sheet: they can upload it to their placement portfolio or send it to their practice educator to discuss. This example comes from a strong attempt.</p>
+    <ul class="sheet-list">
+      <li>Their SBAR handover to Sam</li>
+      <li>The three priorities they chose, and why</li>
+      <li>Their notes on Pat's voicemail</li>
+      <li>What they noticed in the flat and how they classified it</li>
+      <li>The plan they agreed with Graham</li>
+      <li>Sam's feedback</li>
+      <li>Their two reflections</li>
+      <li>Evidence for each learning outcome, LO1 to LO5</li>
+    </ul>
+    <div class="sheet">
+      <figure>
+        <a href="img/record-page-1.jpg"><img src="img/record-page-1.jpg" loading="lazy" width="1241" height="1754" alt="Page 1 of the visit record, headed The Missed Appointment, with the Manchester Met logo. It lists the student, date and route, the SBAR handover to Sam, the priorities chosen before the visit with reasons, notes on the voicemail, and what was noticed in the flat."></a>
+        <figcaption>Page 1: SBAR handover, priorities and findings</figcaption>
+      </figure>
+      <figure>
+        <a href="img/record-page-2.jpg"><img src="img/record-page-2.jpg" loading="lazy" width="1241" height="1754" alt="Page 2 of the visit record: the plan agreed with Graham, feedback from Sam, the student's two reflections, evidence for learning outcomes LO1 to LO5, and what to do with the record."></a>
+        <figcaption>Page 2: plan, feedback, reflections and learning outcomes</figcaption>
+      </figure>
+    </div>
+    <div class="actions"><a class="btn primary" href="sample-visit-record.pdf" download>Download the example record (PDF)</a></div>
   </div>
 </section>
 
